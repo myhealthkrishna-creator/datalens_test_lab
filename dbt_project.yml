@@ -1,0 +1,20 @@
+name: datalens_test_lab
+version: 1.0.0
+config-version: 2
+
+profile: datalens_test_lab
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  datalens_test_lab:
+    +database: DATALENS_LAB
+    +schema: ANALYTICS
+    +pre-hook: "{{ datalens_set_query_tag() }}"
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+

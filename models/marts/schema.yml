@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: Fact table used by the DataLens test lab.
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: amount
+        tests:
+          - not_null
+
