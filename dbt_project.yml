@@ -10,8 +10,8 @@ macro-paths: ["macros"]
 
 models:
   datalens_test_lab:
-    +database: DATALENS_LAB
-    +schema: ANALYTICS
+    +database: ANALYTICS
+    +schema: DBT
     +pre-hook: "{{ datalens_set_query_tag() }}"
     staging:
       +materialized: view
