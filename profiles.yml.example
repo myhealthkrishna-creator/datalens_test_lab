@@ -6,10 +6,9 @@ datalens_test_lab:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
-      role: DBT_ROLE
-      database: ANALYTICS
-      warehouse: DBT_WH
+      role: DATALENS_LAB_ROLE
+      database: DATALENS_LAB
+      warehouse: DATALENS_LAB_WH
       schema: ANALYTICS
       threads: 4
       client_session_keep_alive: false
-
